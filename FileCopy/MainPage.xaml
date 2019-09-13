@@ -9,10 +9,33 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button Content="Button" Margin="62,39,0,0" VerticalAlignment="Top" Height="146" Width="203" Click="Button_Click"/>
-        <Button Content="Button" Margin="62,245,0,0" VerticalAlignment="Top" Height="94" Width="203" Click="Button_Click_1"/>
-        <Button Content="Button" Margin="50,380,0,0" VerticalAlignment="Top" Height="82" Width="215" Click="Button_Click_2"/>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Choose Src Folder" Margin="10" VerticalAlignment="Top" Height="80" Width="180" Click="Button_Click"/>
+            <TextBlock Text="Src Folder: " Margin="10" Foreground="Blue" FontStyle="Italic"  FontSize="20"  VerticalAlignment="Center"/>
+            <TextBlock x:Name="tbSrcFolder" Margin="10" Foreground="Purple" FontSize="20" Text="" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Locate Target"  Margin="10" VerticalAlignment="Top" Height="80" Width="180" Click="Button_Click_1"/>
+            <TextBlock Text="Target Folder: " Margin="10" Foreground="Blue" FontStyle="Italic" FontSize="20" VerticalAlignment="Center" />
+            <TextBlock x:Name="tbTargetFolder" Margin="10"  Foreground="Purple" FontSize="20"  Text=""  VerticalAlignment="Center"/>
+        </StackPanel>
+        <Button Content="Copy Src Folder To Target" Margin="10" VerticalAlignment="Top" Height="80" Width="180" Click="Button_Click_2"/>
+        <ProgressBar x:Name="pb" Height="30" Width="319" HorizontalAlignment="Left" Maximum="100" Minimum="0" Value="0" Margin="10"/>
+        <ProgressBar x:Name="pb2" Height="30" Width="319" HorizontalAlignment="Left" Maximum="10" Minimum="0" Value="0" Margin="10"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock  Foreground="Blue" FontStyle="Italic" FontSize="20" Text="No. Files: "/>
+            <TextBlock Foreground="Purple" FontSize="20" x:Name="tbNumFiles" Text="0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock  Foreground="Blue" FontStyle="Italic" FontSize="20" Text="No. Folders: "/>
+            <TextBlock Foreground="Purple" FontSize="20" x:Name="tbNumFolders" Text="0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock  Foreground="Blue" FontStyle="Italic" FontSize="20" Text="Status: "/>
+            <TextBlock Foreground="Green" FontSize="20" x:Name="tbStatus" Text=""/>
+        </StackPanel>
+        <Button Content="Cancel" Margin="10" VerticalAlignment="Top" Height="80" Width="180" Click="Button_Click_3"/>
 
-    </Grid>
+    </StackPanel>
 </Page>

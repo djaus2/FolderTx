@@ -1,2 +1,5 @@
 # FolderTx
-Transfer a DNCore folder using File Sahre.. Ftp coming.
+UA WP App
+
+Transfer a .Net Core  App folder using File Share to to an IoT  Device.. Ftp coming.
+

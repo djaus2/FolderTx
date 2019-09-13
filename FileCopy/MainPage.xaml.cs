@@ -101,16 +101,16 @@ namespace FileCopy
             Task.Run(async () => {
                 await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
                 {
+                    tbNumFiles.Text = filecount.ToString();
+                    tbNumFolders.Text = foldercount.ToString();
                     if (filecount > pb.Maximum)
-                    {
-                        tbNumFiles.Text = filecount.ToString();
+                    {                        
                         while (filecount > pb.Maximum)
                             filecount -= (int)pb.Maximum;
                     }
                     pb.Value = filecount;
                     if (foldercount > pb2.Maximum)
-                    {
-                        tbNumFolders.Text = foldercount.ToString();
+                    {                       
                         while (foldercount > pb2.Maximum)
                             foldercount -= (int)pb2.Maximum;
                     }
